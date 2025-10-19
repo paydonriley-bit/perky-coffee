@@ -7,3 +7,73 @@ $color-white: #f5f5f0;
 
 $text-head: "Rock Salt", cursive;
 $text-body: "Poppins", sans-serif;
+
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: $text-body;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    line-height: 1.6;
+    overflow-x: hidden;
+    z-index: 0;
+
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/img/perky-home.jpg) center/cover no-repeat;
+    filter: brightness(80%);
+    z-index: -1;
+}
+
+section {
+    padding: 80px 0;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-family: $text-head;
+    color: $color-white;
+    font-size: 100;
+}
+
+/* Home */
+#home {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0;
+}
+
+.home-content {
+    max-width: 800px;
+    z-index: -1;
+    margin-bottom: 20px;
+    transform: rotate(-10deg);
+}
+
+
+
+
+@import 'navbar';
