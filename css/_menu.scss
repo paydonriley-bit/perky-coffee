@@ -1,0 +1,16 @@
+.menu-title {
+    font-family: $text-head;
+    color: $color-light;
+}
+
+thead {
+    background-color: $color-primary;
+    color: $color-white;
+    font-family: $text-body;
+}
+
+tbody {
+    background-color: $color-light;
+    color: $color-dark;
+}
+
