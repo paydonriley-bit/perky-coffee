@@ -4,12 +4,13 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: center;
     align-items: center;
     width: 100%;
     z-index: 1000;
     position: absolute;
-    bottom: -50px;
+    bottom: 20px;
 }
 
 .header-links a {
@@ -24,7 +25,27 @@ nav {
 }
 
 .header-links a:hover {
-    color: $color-white;
+    color: $color-light;
     text-decoration: underline;
 }
 
+#reserveButton {
+    color: $color-white;
+    background-color: $color-primary;
+}
+
+.modal-header {
+    background-color: $color-dark;
+    color: $color-light;
+    font-family: $text-head;
+}
+
+#cancel {
+    background-color: $color-secondary;
+    color: $color-white;
+}
+
+#search {
+    background-color: $color-primary;
+    color: $color-white;
+}

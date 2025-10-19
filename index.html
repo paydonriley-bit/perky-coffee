@@ -21,20 +21,29 @@
     </head>
     <body>
 
-        <!--navbar-->
+        
         <header>
+            <div class="d-flex container justify-content-end">
+                <div class="row flex-row">
+                    <div class="col-md-4 col-xl-2 mt-5">
+                        <a id="reserveButton" class="btn" data-bs-toggle="modal" data-bs-target="#reservationModal" role="button">Reserve</a>
+                
+                    </div>
+                </div>
+            </div>
+
+            <!--navbar-->
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                    <div class="header-title"></div>
                     <div class="header-links collapse navbar-collapse">
-                        <ul class="navbar-nav mb-lg-0 mt-5 ms-5">
-                            <li class="nav-item">
+                        <ul class="navbar-nav mb-lg-0 mt-5 ms-auto me-auto">
+                            <li class="nav-item me-4">
                                 <a class="nav-link" aria-current="page" href="#">Home</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item me-4">
                                 <a class="nav-link" href="#">Menu</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item me-4">
                                 <a class="nav-link" href="#">About</a>
                             </li>
                             <li class="nav-item">
@@ -44,9 +53,60 @@
                     </div>
                 </div>
             </nav>
+
+            
         </header>
 
         <main>
+
+            <!--Reservation Form-->
+
+            <div class="modal fade" id="reservationModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title">Reserve a Table</h3>
+                            <button type="button" class=" btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <form id="reserveForm">
+                                    <div class="row mb-3">
+                                        <div class="col-sm-6">
+                                            <label class="col-form-label" for="party">Party Size</label>
+                                        </div>
+                                        <div class="col-sm-6 ms-sm-auto">
+                                            <select class="form-select" id="party" name="party">
+                                                <option selected>Select...</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3 form-group">
+                                        <div class="col-sm-6">
+                                            <label class="col-form-label" for="date">Date</label>
+                                        </div>
+                                        <div class="col-sm-6 ms-sm-auto">
+                                            <input class="form-control" type="date" id="date" name="date">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col">
+                                            <button id="cancel" data-bs-dismiss="modal" type="button" class="btn" aria-label="Close">Cancel</button>
+                                            <button id="search" type="submit" class="btn">Search</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!--home-->
             <section id="home">
